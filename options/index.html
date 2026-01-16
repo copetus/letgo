@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Let Go Options</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="options">
+    <h1>Let Go</h1>
+    <p class="subtitle">Set how long a tab can sit idle before it automatically closes</p>
+
+    <div class="info">Tabs that are pinned or currently inactive are never closed.</div>
+
+    <div class="form">
+      <label class="label" for="close-after">Close tabs after</label>
+      <div class="controls">
+        <select id="close-after" class="select">
+          <option>5 minutes</option>
+          <option selected>10 minutes</option>
+          <option>15 minutes</option>
+          <option>30 minutes</option>
+          <option>1 hour</option>
+        </select>
+        <button class="button" type="button">Confirm</button>
+      </div>
+    </div>
+
+    <p class="current">Minutes Set: <strong>10 minutes</strong></p>
+  </main>
+</body>
+</html>
