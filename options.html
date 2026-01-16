@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LetGo Settings</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: "Inter", system-ui, sans-serif;
+      }
+
+      body {
+        margin: 0;
+        padding: 32px;
+        background: #f6f7fb;
+        color: #1f2633;
+      }
+
+      .card {
+        max-width: 420px;
+        margin: 0 auto;
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 24px;
+        box-shadow: 0 12px 30px rgba(18, 24, 40, 0.12);
+      }
+
+      h1 {
+        margin-top: 0;
+        font-size: 24px;
+      }
+
+      label {
+        display: block;
+        margin-top: 16px;
+        font-weight: 600;
+      }
+
+      input[type="number"] {
+        width: 100%;
+        margin-top: 8px;
+        padding: 12px 14px;
+        border-radius: 10px;
+        border: 1px solid #d0d5dd;
+        font-size: 16px;
+      }
+
+      .help {
+        margin-top: 8px;
+        color: #475467;
+        font-size: 14px;
+      }
+
+      .status {
+        margin-top: 16px;
+        color: #12b76a;
+        font-weight: 600;
+        min-height: 22px;
+      }
+
+      button {
+        margin-top: 20px;
+        width: 100%;
+        padding: 12px 16px;
+        background: #3538cd;
+        color: #fff;
+        border: none;
+        border-radius: 999px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      button:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background: #0f1115;
+          color: #f8f9fc;
+        }
+
+        .card {
+          background: #161b22;
+          box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        input[type="number"] {
+          background: #0f141c;
+          border-color: #30363d;
+          color: #f8f9fc;
+        }
+
+        .help {
+          color: #9aa4b2;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <h1>LetGo settings</h1>
+      <p>Set how long a tab can sit idle before it is closed.</p>
+
+      <label for="timeout">Idle time (minutes)</label>
+      <input id="timeout" type="number" min="5" step="1" />
+      <p class="help">Tabs that are pinned or currently active are never closed.</p>
+
+      <button id="save">Save settings</button>
+      <div class="status" id="status"></div>
+    </main>
+
+    <script src="options.js"></script>
+  </body>
+</html>
