@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "LetGo",
+  "version": "1.0.0",
+  "description": "Automatically closes tabs you haven't viewed for a while.",
+  "permissions": ["tabs", "storage", "alarms"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "options_page": "options.html",
+  "action": {
+    "default_title": "LetGo"
+  }
+}
